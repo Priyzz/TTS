@@ -14,3 +14,4 @@ Saya membuat file baru bernama urls.py di dalam direktori aplikasi main. Pada fi
 
 Pada file views.py, saya membuat fungsi bernama show_main yang bertugas menampilkan nama aplikasi, nama saya, dan NPM saya. Fungsi ini akan mengembalikan data tersebut ke template HTML yang telah saya buat di folder templates/main.html. Setelah model selesai dibuat, saya menjalankan perintah python manage.py makemigrations dan python manage.py  migrate untuk membuat dan menerapkan skema database sesuai dengan model yang telah didefinisikan.
 
+Di akhir, saya melakukan deployment melalui PWS dengan menkana tombol buat projek baru, dan melakukan penyesuaian pada bagian environs. Lalu saya menjalankan perintah yang terdapat pada informasi Project Command pada halaman PWS dan memasukkan username dan password yang sebelumnya telah saya catat.
