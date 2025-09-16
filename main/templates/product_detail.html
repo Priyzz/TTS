@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Detail Produk</h2>
+<ul>
+    <li>Nama: {{ product.name }}</li>
+    <li>Harga: {{ product.price }}</li>
+    <li>Deskripsi: {{ product.description }}</li>
+    <li>Thumbnail: <img src="{{ product.thumbnail }}" width="100"></li>
+    <li>Kategori: {{ product.category }}</li>
+    <li>Stok: {{ product.stock }}</li>
+    <li>Brand: {{ product.brand }}</li>
+    <li>Ukuran: {{ product.size }}</li>
+    <li>Warna: {{ product.color }}</li>
+    <li>Unggulan: {{ product.is_featured }}</li>
+</ul>
+<a href="{% url 'main:show_main' %}">Kembali ke Daftar Produk</a>
+{% endblock %}
