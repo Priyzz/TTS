@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<h1>Tim Tarkam Shop</h1>
+
+<h5>NPM: </h5>
+<p>{{ npm }}<p>
+
+<h5>Name:</h5>
+<p>{{ name }}</p>
+
+<h5>Class:</h5>
+<p>{{ class }}</p>
+
 <h2>Daftar Produk</h2>
 <a href="{% url 'main:add_product' %}"><button>Add</button></a>
 <table border="1">

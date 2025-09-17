@@ -16,6 +16,7 @@ def show_main(request):
     products = Product.objects.all()
     context = {
         "nama_aplikasi": "Tim Tarkam Shop",
+        'npm': '2406359241',
         'name': 'Priyanggara Zuhaynanda Zavana',
         'class': 'PBP F',
         'products' : products,
