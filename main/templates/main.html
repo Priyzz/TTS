@@ -3,6 +3,8 @@
 
 <h1>Tim Tarkam Shop</h1>
 
+<p>Login sebagai: <strong>{{ user.username }}</strong></p>
+
 <h5>NPM: </h5>
 <p>{{ npm }}<p>
 
@@ -12,8 +14,22 @@
 <h5>Class:</h5>
 <p>{{ class }}</p>
 
+
 <h2>Daftar Produk</h2>
 <a href="{% url 'main:add_product' %}"><button>Add</button></a>
+<a href="{% url 'main:logout' %}">
+  <button>Logout</button>
+</a>
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+
+<hr>
+<a href="?filter=all">
+    <button type="button">All Product</button>
+</a>
+<a href="?filter=my">
+    <button type="button">My Product</button>
+</a> 
+
 <table border="1">
     <tr>
         <th>Nama</th>

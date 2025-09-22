@@ -1,21 +1,53 @@
-1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
+Nama: Priyanggara Zuhaynanada Zavana
+NPM: 2406359241
+Kelas: PBP F
 
+
+TUGAS 2
+Link PWS: https://priyanggara-zuhaynanda-timtarkamshop.pbp.cs.ui.ac.id/
+
+1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+Pertama, saya membuat direktori utama dengan nama "TTS" sebagai tempat penyimpanan seluruh project. Setelah itu, saya membuat virtual environment di dalam direktori tersebut untuk mengisolasi dependensi project. Saya memastikan seluruh dependensi yang dibutuhkan, seperti Django, sudah terinstall di virtual environment ini.
+
+Selanjutnya, saya membuat project Django dengan menjalankan perintah django-admin startproject tim_tarkam_shop. Setelah project berhasil dibuat, saya melakukan konfigurasi pada environment variable dan file-file utama seperti settings.py agar sesuai dengan kebutuhan project.
+@@ -14,4 +15,21 @@ Saya membuat file baru bernama urls.py di dalam direktori aplikasi main. Pada fi
+
+Pada file views.py, saya membuat fungsi bernama show_main yang bertugas menampilkan nama aplikasi, nama saya, dan NPM saya. Fungsi ini akan mengembalikan data tersebut ke template HTML yang telah saya buat di folder templates/main.html. Setelah model selesai dibuat, saya menjalankan perintah python manage.py makemigrations dan python manage.py  migrate untuk membuat dan menerapkan skema database sesuai dengan model yang telah didefinisikan.
+
+Di akhir, saya melakukan deployment melalui PWS dengan menkana tombol buat projek baru, dan melakukan penyesuaian pada bagian environs. Lalu saya menjalankan perintah yang terdapat pada informasi Project Command pada halaman PWS dan memasukkan username dan password yang sebelumnya telah saya catat.
+Di akhir, saya melakukan deployment melalui PWS dengan menkana tombol buat projek baru, dan melakukan penyesuaian pada bagian environs. Lalu saya menjalankan perintah yang terdapat pada informasi Project Command pada halaman PWS dan memasukkan username dan password yang sebelumnya telah saya catat.
+
+2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
+link canva bagan: https://www.canva.com/design/DAGygKjlvS8/PS5wNSaJ6r4Ttq-9ecjy7w/edit?utm_content=DAGygKjlvS8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+3. Jelaskan peran settings.py dalam proyek Django!
+Dalam sebuah proyek Django, berkas settings.py berperan sebagai pusat konfigurasi yang mengatur hampir seluruh aspek perilaku aplikasi. Di dalamnya tersimpan pengaturan dasar seperti SECRET_KEY untuk keamanan, DEBUG untuk menentukan mode pengembangan atau produksi, serta ALLOWED_HOSTS untuk membatasi domain yang diizinkan untuk mengakses aplikasi. Berkas ini juga memuat daftar aplikasi yang digunakan (INSTALLED_APPS), middleware yang memproses request dan response, konfigurasi database (DATABASES), pengaturan template HTML, serta lokasi penyimpanan file statis dan media. Selain itu, settings.py mengatur bahasa (LANGUAGE_CODE), zona waktu (TIME_ZONE), dan opsi keamanan tambahan seperti penggunaan HTTPS atau pengaturan cookie. Setiap kali server Django dijalankan, framework akan membaca settings.py untuk menentukan bagaimana request diproses, data diambil dari database, dan hasil akhirnya dirender menjadi HTML sebelum dikirim kembali ke browser pengguna. Jadi, settings.py memiliki peran yang sangat signifikan dalanm proyek Django.
+
+4. Bagaimana cara kerja migrasi database di Django?
+Cara kerja migrasi database di Django adalah dengan menyesuaikan perubahan yang dibuat pada model agar langsung tercermin di dalam struktur database. Jadi, ketika developer menambah, mengubah, atau menghapus bagian dari model, Django bisa otomatis membuat catatan perubahan tersebut melalui perintah makemigrations. Selanjutnya, perintah migrate akan menerapkan perubahan itu ke database, misalnya dengan membuat tabel baru, menambahkan kolom, atau mengganti jenis data, sambil tetap menyimpan riwayat migrasi di tabel khusus. Dengan cara ini, developer tidak perlu repot menulis kode SQL sendiri, karena Django sudah mengatur agar struktur database selalu sesuai dengan model yang didefinisikan.
+
+5. Menurut Anda, dari semua framework yang ada, mengapa framework Django dijadikan permulaan pembelajaran pengembangan perangkat lunak?
+Django sering dipakai sebagai langkah awal untuk belajar membuat aplikasi berbasis web karena sudah menyediakan banyak hal penting yang dibutuhkan tanpa harus menambah banyak komponen lain. Framework ini memberikan panduan yang jelas dalam menyusun proyek, lengkap dengan dokumentasi yang mudah diikuti. Di dalamnya juga sudah ada konsep dasar pengembangan web, seperti cara mengatur jalannya aplikasi, menghubungkannya dengan database, hingga menampilkan hasil ke pengguna. Dengan begitu, pemula bisa lebih cepat memahami bagaimana sebuah aplikasi web bekerja dari awal sampai akhir.
+
+Selain itu, Django membiasakan penggunanya untuk menulis kode dengan rapi dan teratur, sehingga sejak awal belajar sudah terbentuk pola kerja yang baik. Fitur keamanan yang tersedia juga membantu mahasiswa memahami betapa pentingnya menjaga aplikasi tetap aman dari berbagai ancaman. Berkat kemudahan, kelengkapan, dan kualitas standarnya, Django bisa jadi wadah belajar yang ideal sebelum mencoba framework lain yang lebih ringan atau lebih khusus.
+
+6. Apakah ada feedback untuk asisten dosen tutorial 1 yang telah kamu kerjakan sebelumnya?
+Tidak ada, sampai saat ini asdos-asdosnya sangat baik dalam menanggapi pertanyaan yang saya berikan.
+
+TUGAS 3
+1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
 Dalam membangun sebuah platform, kita perlu data delivery karena ini adalah cara agar data bisa sampai dari satu bagian ke bagian lain dengan cepat, aman, dan teratur. Data delivery memastikan data yang dibutuhkan dapat tersedia secara real-time dan konsisten di berbagai komponen platform, tanpa mekanisme ini, aplikasi rentan mengalami keterlambatan, kehilangan data, atau inkonsistensi.
 
 2. Menurutmu, mana yang lebih baik antara XML dan JSON? Mengapa JSON lebih populer dibandingkan XML?
-
 Kalau harus memilih, menurut saya JSON lebih baik dibandingkan XML. Alasannya karena JSON lebih sederhana, lebih ringan, dan lebih cepat diproses. Formatnya yang ringkas memudahkan pembuatnya untuk membaca dan menulis data tanpa banyak kode tambahan. Selain itu, ukuran data JSON biasanya lebih kecil dibanding XML, sehingga lebih efisien untuk dikirim melalui jaringan. JSON juga lebih populer karena sifatnya yang sederhana dan langsung cocok dengan JavaScript, bahasa yang sering digunakan untuk pengembangan web. JSON juga lebih mudah dibaca manusia, lebih cepat diproses mesin, serta lebih hemat bandwidth. Jadi, meskipun XML masih relevan di konteks tertentu, tren perkembangan teknologi mendorong JSON menjadi pilihan utama di banyak platform saat ini.
 
 3. Jelaskan fungsi dari method is_valid() pada form Django dan mengapa kita membutuhkan method tersebut?
-
 Method is_valid() digunakan untuk melakukan validasi terhadap data yang dikirim melalui form. Ketika dipanggil, Django akan mengecek setiap field pada form: apakah wajib diisi tapi kosong, apakah formatnya benar (misalnya email harus berbentuk alamat email), apakah sesuai batas panjang karakter, dan aturan lainnya yang sudah kita tentukan di model atau form. Hasil dari is_valid() berupa nilai True atau False. Jika True, berarti semua data sudah valid dan kita bisa lanjut memprosesnya. Jika False, Django akan menyediakan pesan error yang bisa ditampilkan kembali ke pengguna agar mereka memperbaiki inputnya.
 
 4. Mengapa kita membutuhkan csrf_token saat membuat form di Django? Apa yang dapat terjadi jika kita tidak menambahkan csrf_token pada form Django? Bagaimana hal tersebut dapat dimanfaatkan oleh penyerang?
-
 Di Django, setiap kali kita membuat form yang mengirim data dengan metode POST, kita wajib menambahkan csrf_token. Token ini adalah semacam kode unik yang dibuat oleh server dan dikirimkan ke halaman web. Saat pengguna mengirim form, token itu ikut dikirim balik ke server. Django kemudian mengecek apakah token yang diterima sama dengan yang sebelumnya dibuat. Fungsinya adalah untuk memastikan bahwa permintaan yang datang benar-benar dari pengguna yang sah lewat halaman resmi aplikasi kita, bukan dari sumber luar yang berbahaya. Kalau csrf_token tidak ada, aplikasi akan rentan terhadap serangan CSRF (Cross-Site Request Forgery). Serangan ini memanfaatkan fakta bahwa browser pengguna secara otomatis mengirimkan cookie otentikasi ke server, walaupun permintaan dibuat dari situs lain. Artinya, penyerang bisa membuat browser korban mengirim permintaan ke aplikasi kita seolah-olah berasal dari pengguna sah.
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
-
 Untuk mengimplementasikan fitur penampilan data produk dalam format XML dan JSON, baik untuk seluruh data maupun berdasarkan ID, saya memulai dengan menambahkan empat fungsi baru pada file views.py di main. Fungsi pertama, show_products_json, bertugas untuk mengambil seluruh objek Product dari database dan mengubahnya menjadi format JSON menggunakan modul serializers dari Django, kemudian mengembalikannya sebagai response dengan tipe konten application/json. Fungsi kedua, show_products_xml, memiliki cara kerja yang sama, namun mengubah data menjadi format XML dan mengembalikannya dengan tipe konten application/xml. Selanjutnya, saya membuat dua fungsi lagi, yaitu show_product_json_by_id dan show_product_xml_by_id, yang masing-masing mengambil satu objek Product berdasarkan ID yang diberikan pada URL, lalu mengubahnya ke format JSON atau XML sesuai kebutuhan.
 
 Setelah seluruh fungsi views selesai dibuat, saya melanjutkan dengan menambahkan routing baru pada file urls.py di aplikasi main. Pada file ini, saya mendefinisikan empat path baru yang masing-masing mengarah ke fungsi views yang telah dibuat. Misalnya, path json/ akan memanggil fungsi show_products_json, sedangkan path xml/<str:id>/ akan memanggil fungsi show_product_xml_by_id. Dengan penambahan routing ini, setiap permintaan ke URL yang sesuai akan diarahkan ke fungsi view yang tepat dan menghasilkan response dalam format yang diinginkan.
@@ -30,3 +62,42 @@ Terakhir, untuk menampilkan halaman detail dari setiap data objek model Product,
 Tidak ada
 
 Link Screenshot akses url lewat Postman: https://www.canva.com/design/DAGzLXkq_zA/Pu8i_BN0d3wL5u-kVUsR2A/edit?utm_content=DAGzLXkq_zA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+TUGAS 4
+1. Apa itu Django AuthenticationForm? Jelaskan juga kelebihan dan kekurangannya.
+AuthenticationForm adalah sebuah form bawaan yang disediakan Django untuk menangani proses login pengguna. Form ini sudah terintegrasi langsung dengan sistem autentikasi Django, sehingga kita tidak perlu repot membangun form login dari nol. Secara default, form ini meminta input berupa username dan password, lalu memvalidasi apakah data tersebut sesuai dengan pengguna yang terdaftar di database. Kalau valid, pengguna bisa masuk ke dalam sistem. Kalau tidak, Django otomatis menampilkan pesan error.
+
+Kalau bicara tentang kelebihan, yang pertama jelas adalah kepraktisannya. Karena ini bawaan Django, kita tidak perlu menulis logika autentikasi sendiri. Cukup gunakan form ini, dan semuanya bisa berjalan dengan aman. Kedua, AuthenticationForm sudah teruji dan mengikuti praktik keamanan standar, termasuk hashing password dan penanganan error. Ketiga, form ini fleksibel karena bisa dikustomisasi.
+
+Tapi tentu ada juga kekurangannya. Menurut saya, salah satunya adalah keterbatasan fitur jika kita ingin membuat sistem login yang kompleks, misalnya dengan two-factor authentication atau login menggunakan media sosial. 
+
+2. Apa perbedaan antara autentikasi dan otorisasi? Bagaiamana Django mengimplementasikan kedua konsep tersebut?
+Autentikasi adalah proses untuk memastikan identitas seseorang, sedangkan otorisasi adalah proses untuk menentukan apa saja yang boleh dilakukan oleh orang tersebut setelah identitasnya dikenali.
+
+Dalam Django, kedua konsep ini sudah diimplementasikan secara terintegrasi. Untuk autentikasi, Django menyediakan sistem login berbasis username dan password, yang secara default menggunakan model User. Validasi dilakukan dengan memastikan data pengguna cocok dengan informasi di database, lengkap dengan hashing password untuk keamanan. Sementara untuk otorisasi, Django menggunakan sistem permissions dan groups. Misalnya, kita bisa menentukan apakah seorang user boleh menambah, mengubah, atau menghapus suatu model. Selain itu, ada juga decorator seperti @login_required yang memudahkan kita mengatur akses ke view tertentu.
+
+3. Apa saja kelebihan dan kekurangan session dan cookies dalam konteks menyimpan state di aplikasi web?
+Session biasanya menyimpan data di server, dan di sisi klien hanya ada ID unik untuk mengakses data itu. Kelebihannya, lebih aman karena informasi sensitif tidak langsung disimpan di browser. Selain itu, kapasitas penyimpanan juga lebih besar dibanding cookies, karena yang tersimpan di server bisa berupa struktur data kompleks. Kekurangannya, session butuh manajemen server-side (misalnya database atau cache), sehingga bisa lebih membebani server dan tidak selalu efisien untuk aplikasi dengan jumlah pengguna sangat besar.
+
+Di sisi lain, cookies menyimpan data langsung di browser pengguna. Kelebihannya adalah ringan dan tidak membebani server, cocok untuk data kecil. Cookies juga otomatis terkirim ke server setiap kali ada request ke domain terkait, jadi tidak perlu ada query tambahan. Namun, kekurangannya adalah ukurannya yang terbatas, lebih rentan terhadap pencurian data, dan bisa dihapus pengguna kapan saja.
+
+4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai? Bagaimana Django menangani hal tersebut?
+Saya menganggap penggunaan cookies tidak benar-benar aman secara default. Cookies memang praktis untuk menyimpan informasi ringan, tapi tetap ada risiko potensial yang harus diwaspadai. Misalnya XSS (Cross-Site Scripting), di mana penyerang bisa menyuntikkan script berbahaya untuk mencuri cookies pengguna. Ada juga CSRF (Cross-Site Request Forgery), ketika cookies sesi dimanfaatkan untuk melakukan aksi tanpa sepengetahuan pengguna. Selain itu, kalau cookies tidak diatur dengan benar, misalnya tanpa enkripsi atau tanpa atribut keamanan, informasi sensitif bisa saja bocor.
+
+Dalam  Django, sebenarnya Django sudah punya mekanisme bawaan untuk meminimalisasi risiko tersebut. Misalnya:
+- HttpOnly flag diaktifkan pada session cookie, sehingga JavaScript tidak bisa langsung mengaksesnya, yang membantu mencegah pencurian lewat XSS.
+- Secure flag bisa diaktifkan agar cookie hanya dikirim lewat koneksi HTTPS.
+- CSRF tokens secara otomatis digunakan Django untuk melindungi form dari serangan CSRF.
+- Django juga mendukung SESSION_COOKIE_SECURE, SESSION_COOKIE_HTTPONLY, dan SESSION_COOKIE_SAMESITE di file settings.py, sehingga developer bisa mengatur tingkat perlindungan sesuai kebutuhan.
+
+Jadi menurut saya, cookies bisa aman kalau dikelola dengan benar, tapi tetap tidak boleh dianggap bebas risiko. Django membantu dengan konfigurasi bawaan yang cukup ketat, tapi sebagai developer kita tetap tidak boleh lengah dan mengaktifkan opsi-opsi keamanan tersebut.
+
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+Pertama, saya mengimplementasikan fungsi registrasi, login, dan logout agar pengguna bisa mengakses aplikasi sesuai status autentikasinya. Untuk itu, saya membuat view khusus untuk registrasi yang memanfaatkan form dari Django, lalu menambahkan routing dan template register.html untuk menampilkan form pendaftaran. Untuk login, saya menggunakan AuthenticationForm dari Django, membuat view login yang memvalidasi username dan password, serta mengatur session dan cookie last_login saat pengguna berhasil masuk. Logout juga saya sediakan dengan view yang memanggil fungsi logout dari Django, menghapus session, dan mengarahkan pengguna kembali ke halaman login. Semua routing untuk fitur ini saya atur di file urls.py, dan template login serta register saya letakkan di folder templates.
+
+Setelah fitur autentikasi berjalan, saya membuat dua akun pengguna melalui halaman registrasi. Untuk setiap akun, saya menambahkan tiga data dummy produk menggunakan model Product yang sudah saya buat sebelumnya.
+
+Selanjutnya, saya menghubungkan model Product dengan model User dengan menambahkan field user = models.ForeignKey(User, on_delete=models.CASCADE, null=True) pada model Product di file models.py. Dengan relasi ini, setiap produk yang ditambahkan akan tercatat sebagai milik user tertentu. Pada saat proses penambahan produk di view add_product, saya memastikan bahwa field user diisi dengan user yang sedang login, misalnya dengan form.instance.user = request.user sebelum menyimpan data produk ke database.
+
+Di akhir, saya menampilkan detail informasi pengguna yang sedang login di halaman utama aplikasi. Pada fungsi view show_main, saya mengirimkan objek request.user ke template, sehingga di main.html saya bisa menampilkan username pengguna yang sedang aktif dengan {{ user.username }}. Selain itu, saya juga menerapkan cookies seperti last_login dengan cara menyimpan waktu login terakhir ke dalam cookie saat proses login berhasil, lalu menampilkannya di halaman utama dengan mengambil nilai cookie tersebut. 

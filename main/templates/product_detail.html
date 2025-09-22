@@ -13,5 +13,10 @@
     <li>Warna: {{ product.color }}</li>
     <li>Unggulan: {{ product.is_featured }}</li>
 </ul>
+{% if product.user %}
+    <p>Author: {{ product.user.username }}</p>
+{% else %}
+    <p>Author: Anonymous</p>
+{% endif %}
 <a href="{% url 'main:show_main' %}">Kembali ke Daftar Produk</a>
 {% endblock %}
